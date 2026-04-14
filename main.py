@@ -113,7 +113,7 @@ class SettingsDialog(QDialog):
 
 
 class CatBehavior:
-    """猫猫行为逻辑 (保持原有完美逻辑不变)"""
+    """猫猫行为逻辑"""
     WALK_FRAMES = { Direction.DOWN: [0, 1, 2, 3], Direction.RIGHT: [4, 5, 6, 7], Direction.UP: [8, 9, 10, 11], Direction.LEFT: [12, 13, 14, 15] }
     SIT_FRAMES = [16, 17, 18]; SIT_IDLE = 18; SIT_BLINK = 19
     LICK_FRAMES = [19, 20, 21, 22, 23]
@@ -256,7 +256,7 @@ class CatWidget(QWidget):
                 # -1 代表 HWND_TOPMOST (置顶)
                 # 0x0002 代表 SWP_NOMOVE (不改变位置)
                 # 0x0001 代表 SWP_NOSIZE (不改变大小)
-                # 0x0010 代表 SWP_NOACTIVATE (极其重要：不抢走键盘输入焦点！)
+                # 0x0010 代表 SWP_NOACTIVATE (极其重要：不抢走键盘输入焦点)
                 ctypes.windll.user32.SetWindowPos(hwnd, -1, 0, 0, 0, 0, 0x0002 | 0x0001 | 0x0010)
             except Exception:
                 pass  # 静默失败，防止在某些特殊环境报错
