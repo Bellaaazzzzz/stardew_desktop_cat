@@ -1,0 +1,19 @@
+{
+    "name": "Stardew Desktop Cat",
+    "version": "1.0.0",
+    "description": "A desktop pet cat from Stardew Valley",
+    "breed": 3,
+    "fps": 10,
+    "behavior": {
+        "walkChance": 0.05,
+        "sitChance": 0.1,
+        "sleepChance": 0.005,
+        "flopChance": 0.008,
+        "lickChance": 0.005,
+        "leapChance": 0.003
+    },
+    "time": {
+        "nightStart": 20,
+        "nightEnd": 6
+    }
+}
